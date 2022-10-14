@@ -3,13 +3,14 @@ import { Button as BaseButton } from "antd";
 
 interface IProps {
     children: string | React.ReactNode;
-    type?: 'primary' | 'text' | 'default';
+    className?: string;
+    type?: 'primary' | 'text' | 'default' | 'link';
 }
 
 const Button = (props: IProps) => {
-    const { children, type = 'default' } = props;
+    const { children, className, type = 'default' } = props;
     return (
-        <BaseButton type={type}>
+        <BaseButton className={className} type={type}>
             {children}
         </BaseButton>
     );

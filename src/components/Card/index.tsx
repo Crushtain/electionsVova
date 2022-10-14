@@ -22,10 +22,10 @@ export const Card = (props: IProps) => {
     return (
         <div className="card">
             <img src={image} alt="" className="card-image"/>
-            <div className="card-name">
+            <div className="c ard-name">
                 {name}
             </div>
-            <Button type="text">Полная программа</Button>
+            <Button className="link" type="link">Полная программа</Button>
             <Button type="default">Проголосовать</Button>
         </div>
     );
