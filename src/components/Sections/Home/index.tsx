@@ -1,7 +1,7 @@
 import React from 'react';
 import {Col, Row} from "antd";
+import {candidates} from '../../../utils/candidates.js';
 import {Card} from "../../Card";
-import arush from '../../../images/arush.png';
 import './styles.css'
 
 export const Home = () => {
@@ -9,27 +9,11 @@ export const Home = () => {
         <div className="home-bg">
             <div className="home-container">
                 <Row gutter={[30, 40]}>
-                    <Col span={24} sm={12} lg={8}>
-                        <Card human={{id: '123', name: 'Артем Арушанян', image: arush}}/>
-                    </Col>
-                    <Col span={24} sm={12} lg={8}>
-                        <Card human={{id: '123', name: 'Артем Арушанян', image: arush}}/>
-                    </Col>
-                    <Col span={24} sm={12} lg={8}>
-                        <Card human={{id: '123', name: 'Артем Арушанян', image: arush}}/>
-                    </Col>
-                    <Col span={24} sm={12} lg={8}>
-                        <Card human={{id: '123', name: 'Артем Арушанян', image: arush}}/>
-                    </Col>
-                    <Col span={24} sm={12} lg={8}>
-                        <Card human={{id: '123', name: 'Артем Арушанян', image: arush}}/>
-                    </Col>
-                    <Col span={24} sm={12} lg={8}>
-                        <Card human={{id: '123', name: 'Артем Арушанян', image: arush}}/>
-                    </Col>
-                    <Col span={24} sm={12} lg={8}>
-                        <Card human={{id: '123', name: 'Артем Арушанян', image: arush}}/>
-                    </Col>
+                    {candidates.map(item => (
+                        <Col key={item.id} span={24} sm={12} lg={8}>
+                            <Card human={item}/>
+                        </Col>
+                    ))}
                 </Row>
             </div>
         </div>

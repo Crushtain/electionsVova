@@ -11,14 +11,15 @@ interface IProps {
     };
 }
 
+
 export const Card = (props: IProps) => {
     const { human } = props;
     const {
-        id,
         name,
         image,
         fullDescription,
     } = human;
+
     return (
         <div className="card">
             <img src={image} alt="" className="card-image"/>
