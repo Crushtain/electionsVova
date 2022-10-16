@@ -1,4 +1,5 @@
 import React from 'react';
+import { ExternalLink } from 'react-external-link';
 import Button from "../Button";
 import './styles.css';
 
@@ -26,7 +27,7 @@ export const Card = (props: IProps) => {
             <div className="c ard-name">
                 {name}
             </div>
-            <Button className="link" type="link">Полная программа</Button>
+            <ExternalLink href="https://vk.com/itmostudents" >Полная программа</ExternalLink>
             <Button type="default">Проголосовать</Button>
         </div>
     );
