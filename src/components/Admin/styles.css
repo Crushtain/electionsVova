@@ -1,5 +1,6 @@
 .admin-login-container {
   height: calc(100vh - 93px);
+  padding: 20px;
   background: url("../../images/adminBg.png") no-repeat center / cover;
 }
 

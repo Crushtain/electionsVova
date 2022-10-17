@@ -1,10 +1,18 @@
 .card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background: rgb(0 0 0 / 85%);
   padding: 5% 15%;
   border-radius: 20px;
   color: white;
+  transition: all 0.3s;
+  height: 100%;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  transition: all 0.3s;
 }
 
 .link {
@@ -13,13 +21,12 @@
 }
 
 .card-name {
-  margin: auto;
-  height: 45px;
-  top: 454px;
+  margin: 10px 0 20px;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 36px;
+  text-align: center;
 }
 
 .card-image {
@@ -34,4 +41,9 @@
 
 .programm:hover {
   color: #b793ea;
+}
+
+.vote {
+  position: relative;
+  bottom: 0;
 }

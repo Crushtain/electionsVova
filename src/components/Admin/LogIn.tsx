@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button, Card, Col, Form, Input, Row, Typography} from "antd";
-
+import './styles.css';
 const {Title} = Typography;
 
 
@@ -16,7 +16,7 @@ const LogIn = () => {
     return (
         <Row justify="center" align="middle" className="admin-login-container">
             <Col>
-                <Card>
+                <Card className="adminCard">
                     <Title level={3} style={{ marginBottom: 40 }}>
                         Администратор
                     </Title>
@@ -45,7 +45,7 @@ const LogIn = () => {
                         </Form.Item>
 
 
-                        <Form.Item wrapperCol={{offset: 8, span: 16}}>
+                        <Form.Item>
                             <Button type="primary" htmlType="submit">
                                 Submit
                             </Button>

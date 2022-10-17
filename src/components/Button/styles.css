@@ -1,18 +1,18 @@
-.logIn {
+.log-in {
   border-radius: 18px !important;
-  background-color: #745b98 !important;
+  background-color: rgba(116 91 152 / 50%) !important;
   border-color: #5c4879 !important;
   color: #e0e0e0 !important;
   transition: 1s !important;
 }
 
-.logIn:hover {
+.log-in:hover {
   border-color: #cecece !important;
   transform: scale(1.05) !important;
   transition: 1s;
 }
 
-.logIn:active {
+.log-in:active {
   transform: scale(0.7) !important;
 }
 
