@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../../../images/logo.svg';
+import Logo from '../../../images/logo.png';
 import {Link} from "react-router-dom";
 import './styles.css';
 import {Col, Row } from 'antd';
@@ -9,27 +9,13 @@ export const Header = () => {
     return (
         <header className="header">
             <Row justify="space-between" align="middle">
-                <Col span={4}>
+                <Col>
                     <Link to='/'>
-                        <img src={Logo} alt="ITMO students"/>
+                        <img src={Logo} width="130" height="53" alt="ITMO students"/>
                     </Link>
                 </Col>
-                <Col span={16}>
-                    <Row gutter={20}>
-                        <Col>
-                            <Link to="/list">
-                                Список кандидатов
-                            </Link>
-                        </Col>
-                        <Col>
-                            <Link to="/support">
-                                Support
-                            </Link>
-                        </Col>
-                    </Row>
-                </Col>
-                <Col span={4}>
-                    <Button>Log in</Button>
+                <Col>
+                    <Button type="logIn">Log in</Button>
                 </Col>
             </Row>
         </header>

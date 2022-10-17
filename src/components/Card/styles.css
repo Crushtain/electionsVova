@@ -1,8 +1,8 @@
 .card {
   display: flex;
   flex-direction: column;
-  background: rgb(0 0 0 / 90%);
-  padding: 10% 25% 5%;
+  background: rgb(0 0 0 / 85%);
+  padding: 5% 15%;
   border-radius: 20px;
   color: white;
 }
@@ -10,4 +10,28 @@
 .link {
   margin-top: 5px;
   margin-bottom: 15px;
+}
+
+.card-name {
+  margin: auto;
+  height: 45px;
+  top: 454px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.card-image {
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgb(92 72 121 / 80%);
+}
+
+.programm {
+  color: #9977c9;
+  margin: 0 auto 20px;
+}
+
+.programm:hover {
+  color: #b793ea;
 }

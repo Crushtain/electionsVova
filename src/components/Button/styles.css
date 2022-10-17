@@ -1,0 +1,31 @@
+.logIn {
+  border-radius: 18px !important;
+  background-color: #745b98 !important;
+  border-color: #5c4879 !important;
+  color: #e0e0e0 !important;
+  transition: 1s !important;
+}
+
+.logIn:hover {
+  border-color: #cecece !important;
+  transform: scale(1.05) !important;
+  transition: 1s;
+}
+
+.logIn:active {
+  transform: scale(0.7) !important;
+}
+
+.vote {
+  border-radius: 18px !important;
+  background-color: rgb(0 0 0 / 0%) !important;
+  border-color: #5c4879 !important;
+  color: #9977c9 !important;
+  transition: 1s !important;
+}
+
+.vote:hover {
+  border-color: #e4d8f6 !important;
+  color: #e4d8f6 !important;
+  transform: scale(1.05);
+}

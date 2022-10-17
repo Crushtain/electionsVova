@@ -1,5 +1,7 @@
 import React from 'react';
 import { ExternalLink } from 'react-external-link';
+import { FileTextOutlined } from '@ant-design/icons';
+
 import Button from "../Button";
 import './styles.css';
 
@@ -24,11 +26,11 @@ export const Card = (props: IProps) => {
     return (
         <div className="card">
             <img src={image} alt="" className="card-image"/>
-            <div className="c ard-name">
+            <div className="card-name">
                 {name}
             </div>
-            <ExternalLink href="https://vk.com/itmostudents" >Полная программа</ExternalLink>
-            <Button type="default">Проголосовать</Button>
+            <ExternalLink href="https://vk.com/itmostudents" className="programm"><FileTextOutlined /> Полная программа</ExternalLink>
+            <Button type="vote">Проголосовать</Button>
         </div>
     );
 };
