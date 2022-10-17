@@ -1,15 +1,26 @@
-import arush from '../images/arush.png';
-import chicha from '../images/chicha.jpeg';
+import chicha from '../images/candidates/chicha.jpeg';
 
 export const candidates = [
   {
     "id": 1,
-    "image": arush,
-    "name": "Артем Арушанян",
+    "image": chicha,
+    "name": "Чича",
     "fullDescription": "daflkjasdhfkljahslf asdfasfd",
   },
   {
     "id": 2,
+    "image": chicha,
+    "name": "Чича",
+    "fullDescription": "daflkjasdhfkljahslf asdfasfd",
+  },
+  {
+    "id": 3,
+    "image": chicha,
+    "name": "Чича",
+    "fullDescription": "daflkjasdhfkljahslf asdfasfd",
+  },
+  {
+    "id": 4,
     "image": chicha,
     "name": "Чича",
     "fullDescription": "daflkjasdhfkljahslf asdfasfd",
