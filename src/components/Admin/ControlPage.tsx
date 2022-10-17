@@ -40,7 +40,7 @@ const ControlPage = (props: IProps) => {
                 <Col span={24}>
                     <Row justify="space-between">
                         <Col>
-                            <Title>
+                            <Title level={3}>
                                 Администрирование
                             </Title>
                         </Col>
@@ -73,7 +73,7 @@ const ControlPage = (props: IProps) => {
                         <Panel key={2} header="Промежуточные результаты" extra={<Button type="primary" onClick={loadData}>Загрузить</Button>}>
                             <Table data={data}/>
                         </Panel>
-                        <Panel key={2} header="Лог загрузок">
+                        <Panel key={3} header="Лог загрузок">
 
                         </Panel>
                     </Collapse>

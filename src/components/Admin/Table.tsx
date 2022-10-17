@@ -46,7 +46,7 @@ const Table = (props: IProps) => {
 
     return (
         data !== null ? (
-            <BaseTable dataSource={data} columns={columns} pagination={false} rowKey="id" bordered/>
+            <BaseTable dataSource={data} columns={columns} pagination={false} rowKey="id" bordered scroll={{ x: 1000 }}/>
         ) : (
             <Empty description="Для получения отчета нажните на кноку «Загрузить»"/>
         )
