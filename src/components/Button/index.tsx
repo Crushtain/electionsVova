@@ -6,8 +6,8 @@ import './styles.css';
 
 interface IProps {
     children: string | React.ReactNode;
-    className?: 'logIn' | 'vote' | 'default' | 'link';
-    type?: 'logIn' | 'vote' | 'default' | 'link';
+    className?: 'log-in' | 'vote' | 'default' | 'link';
+    type?: 'log-in' | 'vote' | 'default' | 'link';
 }
 
 
