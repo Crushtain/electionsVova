@@ -15,7 +15,7 @@ export const Header = () => {
                     </Link>
                 </Col>
                 <Col>
-                    <Button type="log-in">Log in</Button>
+                    <Button type="log-in">Войти</Button>
                 </Col>
             </Row>
         </header>
