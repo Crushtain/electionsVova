@@ -7,17 +7,19 @@ import './styles.css';
 
 interface IProps {
     human: {
-        id: string;
+        id: number;
         name: string;
         image: string;
         fullDescription?: string;
     };
+    vote: (id: number) => void;
 }
 
 
 export const Card = (props: IProps) => {
-    const { human } = props;
+    const { human, vote } = props;
     const {
+        id,
         name,
         image,
         fullDescription,
@@ -30,7 +32,7 @@ export const Card = (props: IProps) => {
                 {name}
             </div>
             <ExternalLink href="https://vk.com/itmostudents" className="programm"><FileTextOutlined /> Полная программа</ExternalLink>
-            <Button type="vote">Проголосовать</Button>
+            <Button onClick={() => vote(id)} type="vote">Проголосовать</Button>
         </div>
     );
 };

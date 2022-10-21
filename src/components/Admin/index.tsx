@@ -16,7 +16,7 @@ interface IProps {
 }
 
 export const Admin = (props: IProps) => {
-    const { role } = props;
+    const { role = "admin" } = props;
 const testData: DataType[] = [
     {
         id: 1,
