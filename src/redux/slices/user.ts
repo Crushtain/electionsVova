@@ -1,21 +1,21 @@
-import {UserState, UserStatus} from "../../types/user";
+import {UserData, UserState, UserStatus} from "../../types/user";
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 
 export const fetchUserData = createAsyncThunk('/', async (params) => {
   // const { data } = await axios.post('/', params)
   return {
-    isAuth: true,
-    isVoted: false,
-    isStudent: true,
-    isuId: 123456,
-  }
+    voteFor: null,
+    isStudent: false,
+    isuId: null
+  } as UserData
 })
 
 const initialState: UserState = {
   data: {
-    isVoted: false,
-    isStudent: true,
-    isuId: 123456,
+    voteFor: null,
+    isStudent: false,
+    isAdmin: false,
+    isuId: null,
   },
   status: UserStatus.loaded
 }
@@ -25,7 +25,13 @@ const userSlice = createSlice({
   initialState,
   reducers: {
     logout: (state: UserState) => {
-      state.data = null;
+      state.data = initialState;
+    },
+    adminLogin: (state: UserState) => {
+      state.data = {...state.data, isAdmin: true};
+    },
+    adminLogout: (state: UserState) => {
+      state.data = {...state.data, isAdmin: false};
     }
   },
   extraReducers: builder => {
@@ -36,11 +42,11 @@ const userSlice = createSlice({
     })
       .addCase(fetchUserData.fulfilled, (state: UserState, action) => {
       state.status = UserStatus.loaded;
-      state.data = action.payload;
+      state.data = {...state.data, ...action.payload};
     })
       .addCase(fetchUserData.rejected, (state: UserState) => {
       state.status = UserStatus.error;
-      state.data = null;
+      state.data = initialState;
     })
   }
 })
@@ -50,3 +56,5 @@ export const selectIsAuth = (state) => Boolean(state.user.data);
 export const userReducer = userSlice.reducer;
 
 export const { logout } = userSlice.actions;
+export const { adminLogin } = userSlice.actions;
+export const { adminLogout } = userSlice.actions;

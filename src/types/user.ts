@@ -5,8 +5,9 @@ export enum UserStatus {
 }
 
 export interface UserData {
-  isVoted: boolean,
+  voteFor: number | null,
   isStudent: boolean,
+  isAdmin: boolean,
   isuId: number,
 }
 
@@ -24,6 +25,6 @@ export interface UserStateLoading {
 
 
 export interface UserStateLoaded {
-  data: User
+  data: UserData
   status: UserStatus.loaded
 }
