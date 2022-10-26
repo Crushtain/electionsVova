@@ -1,19 +1,19 @@
 .ant-modal-content {
   background-color: rgb(92 72 121 / 96%) !important;
-  border-radius: 14px;
+  border-radius: 14px !important;
 }
 
 .ant-modal-header {
   background-color: rgb(80 61 107 / 80%) !important;
-  border-radius: 14px;
-  border: 0;
-  margin: auto;
-  text-align: center;
+  border-radius: 14px !important;
+  border: 0 !important;
+  margin: auto !important;
+  text-align: center !important;
 }
 
 .ant-modal-close-icon {
   color: #3f2e59 !important;
-  transition: 0.5s;
+  transition: 0.5s !important;
 }
 
 .ant-modal-close-icon:hover {
@@ -22,7 +22,7 @@
 }
 
 .ant-modal-title {
-  color: #cecece;
+  color: #cecece !important;
 }
 
 .confirm-text {
@@ -38,40 +38,40 @@
 }
 
 .ant-modal-footer {
-  border: 0;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin: 0 80px;
+  border: 0 !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  margin: 0 80px !important;
 }
 
-.ant-btn-primary {
-  border-radius: 18px;
-  background-color: rgba(116 91 152 / 50%);
-  border-color: #805eab;
-  color: #e0e0e0;
-  transition: 1s;
+.btn-ok {
+  border-radius: 18px !important;
+  background-color: rgba(116 91 152 / 50%) !important;
+  border-color: #805eab !important;
+  color: #e0e0e0 !important;
+  transition: 1s !important;
 }
 
-.ant-btn-primary:hover {
-  border-color: #cecece;
-  transform: scale(1.05);
-  transition: 1s;
-  background-color: rgba(116 91 152 / 50%);
+.btn-ok:hover {
+  border-color: #cecece !important;
+  transform: scale(1.05) !important;
+  transition: 1s !important;
+  background-color: rgba(116 91 152 / 50%) !important;
 }
 
-.ant-btn-default {
-  border-radius: 18px;
-  background-color: rgba(116 91 152 / 50%);
-  border-color: #805eab;
-  color: #e0e0e0;
-  transition: 1s;
+.btn-cancel {
+  border-radius: 18px !important;
+  background-color: rgba(116 91 152 / 50%) !important;
+  border-color: #805eab !important;
+  color: #e0e0e0 !important;
+  transition: 1s !important;
 }
 
-.ant-btn-default:hover {
-  border-color: #cecece;
-  transform: scale(1.05);
-  transition: 1s;
-  background-color: rgba(116 91 152 / 50%);
-  color: #e0e0e0;
+.btn-cancel:hover {
+  border-color: #cecece !important;
+  transform: scale(1.05) !important;
+  transition: 1s !important;
+  background-color: rgba(116 91 152 / 50%) !important;
+  color: #e0e0e0 !important;
 }

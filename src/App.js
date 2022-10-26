@@ -8,10 +8,12 @@ import {useEffect} from "react";
 import {fetchUserData} from "./redux/slices/user";
 import { Info } from "./components/Sections/Info";
 import { Counter } from "./components/Sections/Counter";
-import {Warning} from "./components/modal";
+import {Warning} from "./components/modal/modal-test";
 import {Footer} from "./components/Sections/Footer";
 
 function App() {
+  const dispatch = useAppDispatch();
+
    useEffect(() => {
     dispatch(fetchUserData());
   }, []);

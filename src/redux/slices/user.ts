@@ -15,8 +15,8 @@ export const fetchUserData = createAsyncThunk(
 );
 
 export const adminLogin = createAsyncThunk("user/adminLogin", async () => {
-  await fetchData("api/check_admin_token/");
-  if (true)
+  const response = await fetchData("api/check_admin_token/");
+  if (response)
     return {
       isAdmin: true,
     };
@@ -37,7 +37,7 @@ const userSlice = createSlice({
   initialState,
   reducers: {
     logout: (state: UserState) => {
-      state.data = initialState.data;
+      state.data.isAdmin = false;
     },
     adminLogout: (state: UserState) => {
       state.data = { ...state.data, isAdmin: false };

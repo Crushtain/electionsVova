@@ -1,40 +1,24 @@
-import { Button, Modal } from 'antd';
-import React, { useState } from 'react';
+import { Modal } from "antd";
+import React from "react";
 import './styles.css';
 
-export const Warning = () => {
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
+export const ModalComponent = ({isModalOpen, handleOk, handleCancel}) => {
 
-    const showModal = () => {
-        setIsModalOpen(true);
-    };
-
-    const handleOk = () => {
-        setIsModalOpen(false);
-    };
-
-    const handleCancel = () => {
-        setIsModalOpen(false);
-    };
-    return (
-
-        <div className="warning-block">
-            <div className="Warning-container">
-                <div className="title-holder">
-                    <Button type="primary" onClick={showModal}>
-                        Open Modal
-                    </Button>
-                    <Modal className="modal" title="Подтверждение выбора" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-                        <p className="confirm-text">Вы подтверждаете свой выбор?</p>
-                        <p className="extra-text">Нажав кнопку "ОК" выбор изменить будет нельзя</p>
-                    </Modal>
-                </div>
-
-            </div>
-
-        </div>
-
-    )
-
-}
+  return (
+    <Modal
+      className="modal"
+      title="Подтверждение выбора"
+      open={isModalOpen}
+      onOk={handleOk}
+      onCancel={handleCancel}
+      okButtonProps={{ className: "btn-ok" }}
+      cancelButtonProps={{ className: "btn-cancel" }}
+    >
+      <p className="confirm-text">Вы подтверждаете свой выбор?</p>
+      <p className="extra-text">
+        Нажав кнопку "ОК" выбор изменить будет нельзя
+      </p>
+    </Modal>
+  );
+};

@@ -2,15 +2,17 @@ import React from 'react';
 import {Button, Card, Col, Form, Input, Row, Typography} from "antd";
 import './styles.css';
 import {useAdminAuth} from "../../hooks/useAdminAuth";
+import {adminLogin} from "../../redux/slices/user";
+import {useAppDispatch} from "../../hooks/useAppDispatch";
 const {Title} = Typography;
 
 
 const LogIn = () => {
-    const adminAuth = useAdminAuth();
+    const dispatch = useAppDispatch();
 
     const onFinish = (values: any) => {
         console.log('Success:', values);
-        adminAuth(values.username, values.password).then();
+        dispatch(adminLogin())
     };
 
     const onFinishFailed = (errorInfo: any) => {
