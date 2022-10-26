@@ -12,20 +12,14 @@ import {Warning} from "./components/modal";
 import {Footer} from "./components/Sections/Footer";
 
 function App() {
+    const dispatch = useAppDispatch();
    useEffect(() => {
     dispatch(fetchUserData());
   }, []);
     return (
         <div className="main">
             <Header/>
-            <Counter/>
             <Info/>
-            <Routes>
-                <Route path='/' element={<Home/>}/>
-                <Route path='/admin' element={<Admin/>}/>
-            </Routes>
-            <Footer/>
-            <Warning/>
         </div>
     );
 }

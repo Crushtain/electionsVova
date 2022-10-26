@@ -1,6 +1,9 @@
 .info-bg {
   padding: 0 40px 40px;
+  height: 100%;
   margin: auto;
+  display: flex;
+  align-items: center;
   background-color: rgb(52 49 51 / 98%);
   border: 0;
 }

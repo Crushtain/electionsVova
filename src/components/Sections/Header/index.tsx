@@ -9,14 +9,11 @@ import {ExternalLink} from "react-external-link";
 export const Header = () => {
     return (
         <header className="header">
-            <Row justify="space-between" align="middle">
+            <Row justify="center" align="middle">
                 <Col>
                     <ExternalLink href ="https://vk.com/itmostudents">
                         <img src={Logo} width="130" height="53" alt="ITMO students"/>
                     </ExternalLink>
-                </Col>
-                <Col>
-                    <Button type="log-in">Войти</Button>
                 </Col>
             </Row>
         </header>
