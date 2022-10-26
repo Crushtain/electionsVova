@@ -8,21 +8,9 @@ import kalugina from '../images/candidates/7.jpg';
 import kiski from '../images/candidates/8.jpg';
 import chicha from '../images/candidates/9.jpg';
 import korolev from '../images/candidates/10.jpg';
-
-
-
 import novikov from '../images/candidates/11.jpg';
 import petrishev from '../images/candidates/12.jpg';
 import shvedova from '../images/candidates/13.jpg';
-
-
-
-
-
-
-
-
-
 
 
 export const candidates = [

@@ -1,0 +1,12 @@
+.info-bg {
+  padding: 0 40px 40px;
+  margin: auto;
+  background-color: rgb(52 49 51 / 98%);
+  border: 0;
+}
+
+.info-text {
+  padding: 0 20px 20px;
+  color: #cecece;
+  font-size: calc(16px + 1vw);
+}

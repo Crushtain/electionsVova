@@ -2,7 +2,8 @@ import React from 'react';
 import {Col, Row} from "antd";
 import {candidates} from '../../../utils/candidates.js';
 import {Card} from "../../Card";
-import './styles.css'
+import './styles.css';
+
 
 export const Home = () => {
     const vote = (id) => {
