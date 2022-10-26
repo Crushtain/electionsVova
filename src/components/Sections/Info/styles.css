@@ -8,5 +8,9 @@
 .info-text {
   padding: 0 20px 20px;
   color: #cecece;
-  font-size: calc(16px + 1vw);
+  font-size: calc(12px + 1vw);
+}
+
+.info-text-extra {
+  padding-top: 20px;
 }
