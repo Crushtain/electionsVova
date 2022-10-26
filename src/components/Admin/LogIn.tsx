@@ -1,12 +1,16 @@
 import React from 'react';
 import {Button, Card, Col, Form, Input, Row, Typography} from "antd";
 import './styles.css';
+import {useAdminAuth} from "../../hooks/useAdminAuth";
 const {Title} = Typography;
 
 
 const LogIn = () => {
+    const adminAuth = useAdminAuth();
+
     const onFinish = (values: any) => {
         console.log('Success:', values);
+        adminAuth(values.username, values.password).then();
     };
 
     const onFinishFailed = (errorInfo: any) => {
