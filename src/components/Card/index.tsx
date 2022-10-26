@@ -32,7 +32,11 @@ export const Card = (props: IProps) => {
                 {name}
             </div>
             <ExternalLink href="https://vk.com/itmostudents" className="programm"><FileTextOutlined /> Полная программа</ExternalLink>
-            <Button onClick={() => vote(id)} type="vote">Проголосовать</Button>
+            <Button  onClick={() => vote(id)  } type="vote">Проголосовать</Button>
         </div>
     );
 };
+
+
+
+//<Button  onClick={() => vote(id)

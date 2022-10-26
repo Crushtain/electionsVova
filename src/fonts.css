@@ -1,0 +1,11 @@
+@font-face {
+  font-family: gorizont;
+  src:
+    local(gorizont),
+    url("fonts/best-font-two.woff2"),
+    url("fonts/best-font-one.woff");
+}
+
+body {
+  font-family: gorizont, sans-serif;
+}

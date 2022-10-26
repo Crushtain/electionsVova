@@ -1,0 +1,24 @@
+.counter {
+  padding: 50px 10px;
+  color: #a58cc7;
+  background-color: rgb(52 49 51 / 98%);
+  margin: auto;
+  text-align: center;
+  font-size: calc(10px + 1vw);
+  font-style: inherit;
+}
+
+.counter-text {
+  margin: auto;
+  background-color: #343133;
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px solid #8e79ab;
+  transition: all 0.3s;
+  box-shadow: 0 0 30px rgb(92 72 121 / 50%);
+}
+
+.counter-text:hover {
+  transition: all 0.3s;
+  box-shadow: 0 0 30px rgb(92 72 121 / 100%);
+}

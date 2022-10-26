@@ -1,0 +1,77 @@
+.ant-modal-content {
+  background-color: rgb(92 72 121 / 96%) !important;
+  border-radius: 14px;
+}
+
+.ant-modal-header {
+  background-color: rgb(80 61 107 / 80%) !important;
+  border-radius: 14px;
+  border: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.ant-modal-close-icon {
+  color: #3f2e59 !important;
+  transition: 0.5s;
+}
+
+.ant-modal-close-icon:hover {
+  color: #a37fd5 !important;
+  transition: 0.5s;
+}
+
+.ant-modal-title {
+  color: #cecece;
+}
+
+.confirm-text {
+  font-size: calc(14px + 1.5vw);
+  text-align: center;
+  color: #cecece;
+}
+
+.extra-text {
+  color: #cecece;
+  text-align: center;
+  font-size: calc(10px + 1vw);
+}
+
+.ant-modal-footer {
+  border: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 80px;
+}
+
+.ant-btn-primary {
+  border-radius: 18px;
+  background-color: rgba(116 91 152 / 50%);
+  border-color: #805eab;
+  color: #e0e0e0;
+  transition: 1s;
+}
+
+.ant-btn-primary:hover {
+  border-color: #cecece;
+  transform: scale(1.05);
+  transition: 1s;
+  background-color: rgba(116 91 152 / 50%);
+}
+
+.ant-btn-default {
+  border-radius: 18px;
+  background-color: rgba(116 91 152 / 50%);
+  border-color: #805eab;
+  color: #e0e0e0;
+  transition: 1s;
+}
+
+.ant-btn-default:hover {
+  border-color: #cecece;
+  transform: scale(1.05);
+  transition: 1s;
+  background-color: rgba(116 91 152 / 50%);
+  color: #e0e0e0;
+}
