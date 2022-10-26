@@ -27,7 +27,7 @@ export const Warning = () => {
                     </Button>
                     <Modal className="modal" title="Подтверждение выбора" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
                         <p className="confirm-text">Вы подтверждаете свой выбор?</p>
-                        <p className="extra-text">Нажав кнопку "Ок" выбор изменить будет нельзя</p>
+                        <p className="extra-text">Нажав кнопку "ОК" выбор изменить будет нельзя</p>
                     </Modal>
                 </div>
 

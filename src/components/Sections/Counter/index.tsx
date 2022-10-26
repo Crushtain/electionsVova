@@ -9,7 +9,7 @@ export const Counter = () => {
         <div className="counter">
             <Row justify="space-between" align="middle">
                 <Col className="counter-text" >
-                    Уже отдано голосов: {counter}
+                    Отдано голосов: {counter}
                 </Col>
             </Row>
         </div>
