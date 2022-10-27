@@ -1,6 +1,6 @@
 import { UserState, UserStatus } from "../../types/user";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { fetchData } from "../../services/fetchData";
+import {checkAdminToken} from "../../services/checkAdminToken";
 
 export const fetchUserData = createAsyncThunk(
   "user/fetchUserData",
@@ -14,9 +14,11 @@ export const fetchUserData = createAsyncThunk(
   }
 );
 
+
 export const adminLogin = createAsyncThunk("user/adminLogin", async () => {
-  const response = await fetchData("api/check_admin_token/");
-  if (response)
+  const response = await checkAdminToken();
+  await console.log(response);
+  if (await response)
     return {
       isAdmin: true,
     };
@@ -64,6 +66,7 @@ const userSlice = createSlice({
       .addCase(adminLogin.fulfilled, (state: UserState, action) => {
         state.status = UserStatus.loaded;
         state.data = { ...state.data, ...action.payload };
+        console.log(state.data);
       })
       .addCase(adminLogin.rejected, (state: UserState) => {
         state.status = UserStatus.error;

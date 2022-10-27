@@ -4,7 +4,7 @@ import { FileTextOutlined } from "@ant-design/icons";
 
 import Button from "../Button";
 import "./styles.css";
-import {ModalComponent} from "../modal";
+import {ModalComponent} from "../Modal";
 
 interface IProps {
   human: {

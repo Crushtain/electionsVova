@@ -8,7 +8,7 @@ import {useEffect} from "react";
 import {fetchUserData} from "./redux/slices/user";
 import { Info } from "./components/Sections/Info";
 import { Counter } from "./components/Sections/Counter";
-import {Warning} from "./components/modal/modal-test";
+import {Warning} from "./components/Modal/modal-test";
 import {Footer} from "./components/Sections/Footer";
 
 function App() {
@@ -20,14 +20,10 @@ function App() {
     return (
         <div className="main">
             <Header/>
-            <Counter/>
-            <Info/>
             <Routes>
                 <Route path='/' element={<Home/>}/>
                 <Route path='/admin' element={<Admin/>}/>
             </Routes>
-            <Footer/>
-            <Warning/>
         </div>
     );
 }
