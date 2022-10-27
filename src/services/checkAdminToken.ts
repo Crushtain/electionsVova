@@ -7,14 +7,15 @@ export const checkAdminToken = async () => {
     const response = await axios.get("api/check_admin_token/");
     return response.data;
   } catch (e) {
-    console.error(e);
     const refresh = localStorage.getItem("AdminRefresh");
-    const data = await refreshAdminToken(refresh);
-    if (data) {
-      localStorage.setItem("AdminAuth", `Bearer ${data.access}`);
-      localStorage.setItem("AdminRefresh", data.refresh);
-      updateDefaultToken("AdminAuth");
-      return { status: "ok" };
+    if (refresh) {
+      const data = await refreshAdminToken(refresh);
+      if (data) {
+        localStorage.setItem("AdminAuth", `Bearer ${data.access}`);
+        localStorage.setItem("AdminRefresh", data.refresh);
+        updateDefaultToken("AdminAuth");
+        return { status: "ok" };
+      }
     }
   }
 };

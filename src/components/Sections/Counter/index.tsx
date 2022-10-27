@@ -24,7 +24,7 @@ export const Counter = (props: IProps) => {
       <Row justify="space-between" align="middle">
         {!isLoading && (
             <Col className="counter-text">
-              {voteStatus === 'Started' ? `Отдано голосов: ${voteCount}` : "Голосование не началось"}
+              {voteStatus === 'Started' ? `Отдано голосов: ${voteCount || 0}` : "Голосование не началось"}
             </Col>
         )}
       </Row>

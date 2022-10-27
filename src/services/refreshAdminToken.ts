@@ -5,7 +5,7 @@ export const refreshAdminToken = async (refresh) => {
     const response = await axios.post("api/token/refresh/", {
       refresh
     });
-    console.log(response.data);
+
     return response.data;
   } catch (e) {
     console.error(e);

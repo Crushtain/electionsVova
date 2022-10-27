@@ -24,7 +24,6 @@ export const Home = () => {
 
     const voteStatus = useSelector(selectVoteStatus);
     const isVoteStartedLoading = useSelector(selectLoadingIsVoteStarted);
-    console.log(voteStatus)
 
 
     const vote = (id) => {

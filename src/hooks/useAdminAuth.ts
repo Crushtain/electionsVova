@@ -12,10 +12,10 @@ export const useAdminAuth = () => {
         username,
         password,
       });
-      await localStorage.setItem("AdminAuth", `Bearer ${response.data.access}`);
-      await localStorage.setItem("AdminRefresh", response.data.refresh);
-      await updateDefaultToken("AdminAuth");
-      await dispatch(adminLogin());
+      localStorage.setItem("AdminAuth", `Bearer ${response.data.access}`);
+      localStorage.setItem("AdminRefresh", response.data.refresh);
+      updateDefaultToken("AdminAuth");
+      dispatch(adminLogin());
     } catch (e) {
       console.error(e);
     }
