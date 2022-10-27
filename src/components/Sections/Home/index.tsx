@@ -5,37 +5,32 @@ import { Card } from "../../Card";
 import "./styles.css";
 import { Counter } from "../Counter";
 import { Info } from "../Info";
-import {Footer} from "../Footer";
-import {useSelector} from "react-redux";
+import { Footer } from "../Footer";
+import { useSelector } from "react-redux";
 import {
-    fetchAppInfo,
-    selectLoadingIsVoteStarted,
-    selectVoteStatus
+  fetchAppInfo,
+  selectLoadingIsVoteStarted,
+  selectVoteStatus,
 } from "../../../redux/slices/appInfo";
-import {useAppDispatch} from "../../../hooks/useAppDispatch";
+import { useAppDispatch } from "../../../hooks/useAppDispatch";
+import { updateDefaultToken } from "../../../utils/updateDefaultToken";
 
 interface IProps {
-    isAuthUser: boolean;
+  canVote: boolean;
 }
 
+updateDefaultToken("UserAuth");
+
 export const Home = (props: IProps) => {
-    const { isAuthUser } = props;
-    const dispatch = useAppDispatch();
+  const { canVote } = props;
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(fetchAppInfo());
+  }, []);
 
-    useEffect(() => {
-        dispatch(fetchAppInfo());
-    }, []);
+  const voteStatus = useSelector(selectVoteStatus);
+  const isVoteStartedLoading = useSelector(selectLoadingIsVoteStarted);
 
-    const voteStatus = useSelector(selectVoteStatus);
-    const isVoteStartedLoading = useSelector(selectLoadingIsVoteStarted);
-
-
-
-    const vote = (id) => {
-    console.log(id);
-    // Vote request on backend
-    //voteAction(id);
-  };
   return (
     <>
       <Counter voteStatus={voteStatus} isLoading={isVoteStartedLoading} />
@@ -45,13 +40,17 @@ export const Home = (props: IProps) => {
           <Row gutter={[30, 40]}>
             {candidates.map((item) => (
               <Col key={item.id} span={24} sm={12} lg={8}>
-                <Card human={item} vote={vote} voteStatus={voteStatus} isAuthUser={isAuthUser}/>
+                <Card
+                  human={item}
+                  voteStatus={voteStatus}
+                  canVote={canVote}
+                />
               </Col>
             ))}
           </Row>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
