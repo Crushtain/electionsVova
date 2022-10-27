@@ -75,6 +75,7 @@ const userSlice = createSlice({
 
 export const selectIsAuth = (state) => Boolean(state.user.data);
 export const selectIsAdmin = (state) => state.user.data.isAdmin;
+export const selectIsLoading = (state) => state.status === "loading"
 
 export const userReducer = userSlice.reducer;
 

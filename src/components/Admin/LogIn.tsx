@@ -8,12 +8,11 @@ const LogIn = () => {
   const adminAuth = useAdminAuth();
 
   const onFinish = (values: any) => {
-    console.log("Success:", values);
     adminAuth(values.username, values.password);
   };
 
   const onFinishFailed = (errorInfo: any) => {
-    console.log("Failed:", errorInfo);
+    console.error("Failed:", errorInfo);
   };
 
   return (
