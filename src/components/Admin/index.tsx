@@ -1,18 +1,12 @@
 import React, {FC, useEffect} from "react";
-import "./styles.css";
 import ControlPage from "./ControlPage";
 import LogIn from "./LogIn";
 import {updateDefaultToken} from "../../utils/updateDefaultToken";
 import {useAppDispatch} from "../../hooks/useAppDispatch";
 import {adminLogin, selectIsAdmin} from "../../redux/slices/user";
 import {useSelector} from "react-redux";
+import "./styles.css";
 
-interface DataType {
-  id: number;
-  name: string;
-  votesCount: number;
-  percent: number;
-}
 
 updateDefaultToken("AdminAuth");
 
