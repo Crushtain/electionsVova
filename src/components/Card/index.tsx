@@ -43,7 +43,7 @@ export const Card = (props: IProps) => {
         <div className="card">
             <img src={image} alt="" className="card-image"/>
             <div className="card-name">{name}</div>
-            <ExternalLink href="https://vk.com/itmostudents" className="programm">
+            <ExternalLink href={fullDescription} className="programm">
                 <FileTextOutlined/> Полная программа
             </ExternalLink>
             {voteStatus === "Started" && (
