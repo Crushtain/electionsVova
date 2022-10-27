@@ -50,13 +50,13 @@
   background-color: rgba(116 91 152 / 50%) !important;
   border-color: #805eab !important;
   color: #e0e0e0 !important;
-  transition: 1s !important;
+  transition: 0.5s !important;
 }
 
 .btn-ok:hover {
   border-color: #cecece !important;
   transform: scale(1.05) !important;
-  transition: 1s !important;
+  transition: 0.5s !important;
   background-color: rgba(116 91 152 / 50%) !important;
 }
 
@@ -65,13 +65,13 @@
   background-color: rgba(116 91 152 / 50%) !important;
   border-color: #805eab !important;
   color: #e0e0e0 !important;
-  transition: 1s !important;
+  transition: 0.5s !important;
 }
 
 .btn-cancel:hover {
   border-color: #cecece !important;
   transform: scale(1.05) !important;
-  transition: 1s !important;
+  transition: 0.5s !important;
   background-color: rgba(116 91 152 / 50%) !important;
   color: #e0e0e0 !important;
 }

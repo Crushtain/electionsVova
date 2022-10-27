@@ -3,13 +3,13 @@
   background-color: rgba(116 91 152 / 50%) !important;
   border-color: #5c4879 !important;
   color: #e0e0e0 !important;
-  transition: 1s !important;
+  transition: 0.5s !important;
 }
 
 .log-in:hover {
   border-color: #cecece !important;
   transform: scale(1.05) !important;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .log-in:active {
@@ -21,7 +21,7 @@
   background-color: rgb(0 0 0 / 0%) !important;
   border-color: #5c4879 !important;
   color: #9977c9 !important;
-  transition: 1s !important;
+  transition: 0.5s !important;
 }
 
 .vote:hover {
