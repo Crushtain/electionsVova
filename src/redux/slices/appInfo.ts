@@ -3,7 +3,7 @@ import axios from "../../axios";
 import {UserStatus} from "../../types/user";
 
 export const fetchAppInfo = createAsyncThunk('app/info', async () => {
-        const { data } = await axios.get('/api/get_vote_status');
+        const { data } = await axios.get('/api/get_vote_status/');
         return data;
     }
 )
