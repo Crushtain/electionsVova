@@ -23,7 +23,6 @@ const ControlPage:FC = () => {
   const dispatch = useAppDispatch()
   const [tableData, setTableData] = useState<DataType[]>(null)
   const [count, setCount] = useState(0);
-  const token = localStorage.getItem("AdminAuth");
 
   const voteStatus = useSelector(selectVoteStatus);
 
@@ -31,10 +30,11 @@ const ControlPage:FC = () => {
     dispatch(fetchAppInfo());
     getCount();
   }, []);
+
   const getCount = async () => {
-    const data = await fetchData("/api/get_vote_results_count/", { token });
+    const data = await fetchData("/api/get_vote_results_count/");
     if (data.status === "Ok") {
-      setCount(data.get_vote_results_count)
+      setCount(data.vote_results_count)
     } else {
       console.error("ошибка при загрузке счетчика");
     }
