@@ -15,10 +15,11 @@ interface IProps {
     };
     vote: (id: number) => void;
     voteStatus: string;
+    isAuthUser: boolean;
 }
 
 export const Card = (props: IProps) => {
-    const {human, vote, voteStatus} = props;
+    const {human, vote, voteStatus, isAuthUser} = props;
     const {id, name, image, fullDescription} = human;
 
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -46,7 +47,7 @@ export const Card = (props: IProps) => {
             <ExternalLink href={fullDescription} className="programm">
                 <FileTextOutlined/> Полная программа
             </ExternalLink>
-            {voteStatus === "Started" && (
+            {voteStatus === "Started" && isAuthUser && (
                 <Button onClick={handleOnClick} type="vote">
                     Проголосовать
                 </Button>

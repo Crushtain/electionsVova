@@ -5,10 +5,8 @@ export enum UserStatus {
 }
 
 export interface UserData {
-  voteFor: number | null,
-  isStudent: boolean,
   isAdmin: boolean,
-  isuId: number,
+  isAuthUser: boolean,
 }
 
 export type UserState = UserStateLoading | UserStateLoaded | UserStateError

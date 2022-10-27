@@ -14,16 +14,21 @@ import {
 } from "../../../redux/slices/appInfo";
 import {useAppDispatch} from "../../../hooks/useAppDispatch";
 
-export const Home = () => {
+interface IProps {
+    isAuthUser: boolean;
+}
+
+export const Home = (props: IProps) => {
+    const { isAuthUser } = props;
     const dispatch = useAppDispatch();
 
     useEffect(() => {
         dispatch(fetchAppInfo());
     }, []);
 
-
     const voteStatus = useSelector(selectVoteStatus);
     const isVoteStartedLoading = useSelector(selectLoadingIsVoteStarted);
+
 
 
     const vote = (id) => {
@@ -33,7 +38,6 @@ export const Home = () => {
   };
   return (
     <>
-
       <Counter voteStatus={voteStatus} isLoading={isVoteStartedLoading} />
       <Info />
       <div className="home-bg">
@@ -41,7 +45,7 @@ export const Home = () => {
           <Row gutter={[30, 40]}>
             {candidates.map((item) => (
               <Col key={item.id} span={24} sm={12} lg={8}>
-                <Card human={item} vote={vote} voteStatus={voteStatus} />
+                <Card human={item} vote={vote} voteStatus={voteStatus} isAuthUser={isAuthUser}/>
               </Col>
             ))}
           </Row>

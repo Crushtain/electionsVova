@@ -5,8 +5,14 @@ import {Col, Row } from 'antd';
 import Button from "../../Button";
 import {ExternalLink} from "react-external-link";
 
+interface IProps {
+    isAuthUser: boolean;
+    logIn: () => void;
+    logOut: () => void;
+}
 
-export const Header = () => {
+export const Header = (props: IProps) => {
+    const { isAuthUser, logIn, logOut } = props;
     return (
         <header className="header">
             <Row justify="space-between" align="middle">
@@ -16,7 +22,7 @@ export const Header = () => {
                     </ExternalLink>
                 </Col>
                 <Col>
-                    <Button type="log-in">Войти</Button>
+                    <Button type="log-in" onClick={isAuthUser ? logOut : logIn}>{isAuthUser ? 'Выйти' : 'Войти'}</Button>
                 </Col>
             </Row>
         </header>
