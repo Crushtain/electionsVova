@@ -7,6 +7,7 @@ export enum UserStatus {
 export interface UserData {
   isAdmin: boolean,
   isAuthUser: boolean,
+  canVote: boolean
 }
 
 export type UserState = UserStateLoading | UserStateLoaded | UserStateError

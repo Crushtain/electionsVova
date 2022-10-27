@@ -1,10 +1,18 @@
 import { Modal } from "antd";
-import React from "react";
-import './styles.css';
+import React, { FC } from "react";
+import "./styles.css";
 
+interface IProps {
+  isModalOpen: boolean;
+  handleOk: () => void;
+  handleCancel: () => void;
+}
 
-export const ModalComponent = ({isModalOpen, handleOk, handleCancel}) => {
-
+export const ModalComponent: FC<IProps> = ({
+  isModalOpen,
+  handleOk,
+  handleCancel,
+}) => {
   return (
     <Modal
       className="modal"

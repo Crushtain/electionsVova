@@ -13,6 +13,11 @@ interface IProps {
 
 export const Header = (props: IProps) => {
     const { isAuthUser, logIn, logOut } = props;
+
+    const handleOnClick = () => {
+        isAuthUser ? logOut() : logIn();
+    }
+
     return (
         <header className="header">
             <Row justify="space-between" align="middle">
@@ -22,7 +27,7 @@ export const Header = (props: IProps) => {
                     </ExternalLink>
                 </Col>
                 <Col>
-                    <Button type="log-in" onClick={isAuthUser ? logOut : logIn}>{isAuthUser ? 'Выйти' : 'Войти'}</Button>
+                    <Button type="log-in" onClick={handleOnClick}>{isAuthUser ? 'Выйти' : 'Войти'}</Button>
                 </Col>
             </Row>
         </header>
