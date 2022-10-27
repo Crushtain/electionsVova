@@ -13,7 +13,7 @@ export const useAdminAuth = () => {
         password,
       });
       await localStorage.setItem("AdminAuth", `Bearer ${response.data.access}`);
-      await localStorage.setItem("AdminRefresh", `Bearer ${response.data.refresh}`);
+      await localStorage.setItem("AdminRefresh", response.data.refresh);
       await updateDefaultToken("AdminAuth");
       await dispatch(adminLogin());
     } catch (e) {
