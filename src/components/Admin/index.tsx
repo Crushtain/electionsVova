@@ -25,29 +25,8 @@ export const Admin: FC= () => {
 
   const isAdmin = useSelector(selectIsAdmin);
 
-  const testData: DataType[] = [
-    {
-      id: 1,
-      name: "asd asd dsadasd",
-      votesCount: 12,
-      percent: 12,
-    },
-    {
-      id: 2,
-      name: "asd asd asd",
-      votesCount: 1,
-      percent: 50,
-    },
-    {
-      id: 3,
-      name: "asd asd",
-      votesCount: 123,
-      percent: 30,
-    },
-  ];
-
   if (isAdmin) {
-    return <ControlPage data={testData} />;
+    return <ControlPage/>;
   } else {
     return <LogIn />;
   }

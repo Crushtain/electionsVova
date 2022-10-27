@@ -1,5 +1,7 @@
 .home-bg {
   background-image: url("../../../images/background.png");
+  background-size: auto 100%;
+  background-position: center;
 }
 
 .home-container {

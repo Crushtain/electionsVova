@@ -1,4 +1,4 @@
-import React from "react";
+import React, {FC, useState} from "react";
 import { Button, Col, Collapse, Row, Typography } from "antd";
 import "./styles.css";
 import Table from "./Table";
@@ -17,18 +17,13 @@ interface DataType {
   percent: number;
 }
 
-interface IProps {
-  data: DataType[];
-}
-
-const ControlPage = (props: IProps) => {
+const ControlPage:FC = () => {
   const dispatch = useAppDispatch()
-
-  const { data } = props;
+  const [tableData, setTableData] = useState<DataType[]>(null)
   const isVotingStarted = false;
 
   const loadData = () => {
-    fetchData("api/get_vote_results/")
+    fetchData("api/get_vote_results/").then(setTableData);
   };
 
   const startVoting = () => {
@@ -88,9 +83,9 @@ const ControlPage = (props: IProps) => {
                 </Button>
               }
             >
-              <Table data={data} />
+              <Table data={tableData} />
             </Panel>
-            <Panel key={3} header="Лог загрузок"></Panel>
+            <Panel key={3} header="Лог загрузок"/>
           </Collapse>
         </Col>
       </Row>
