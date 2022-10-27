@@ -9,7 +9,7 @@ const LogIn = () => {
 
   const onFinish = (values: any) => {
     console.log("Success:", values);
-    adminAuth(values.username, values.password).then();
+    adminAuth(values.username, values.password);
   };
 
   const onFinishFailed = (errorInfo: any) => {
@@ -27,12 +27,14 @@ const LogIn = () => {
             name="admin"
             labelCol={{ span: 9 }}
             wrapperCol={{ span: 13 }}
+            // @ts-ignore
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
             autoComplete="off"
           >
             <Form.Item
               label="Введите логин"
+                // @ts-ignore
               name="username"
               rules={[{ required: true, message: "Введите имя пользователя!" }]}
             >
@@ -41,6 +43,7 @@ const LogIn = () => {
 
             <Form.Item
               label="Введите пароль"
+                // @ts-ignore
               name="password"
               rules={[{ required: true, message: "Введите пароль!" }]}
             >
