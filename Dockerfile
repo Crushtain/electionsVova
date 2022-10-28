@@ -7,10 +7,10 @@
 #RUN npm run build
 #
 #FROM nginx
-#COPY app.conf /etc/nginx/conf.d/default.conf
+#COPY nginx.conf /etc/nginx/conf.d/default.conf
 #COPY --from=build /app/build /usr/share/nginx/html
 
-FROM node:12.2.0-alpine as react_build
+FROM node:12.4.0-alpine as react_build
 #also say
 WORKDIR /app
 #copy the react app to the container
@@ -18,7 +18,7 @@ COPY . /app/
 
 # #prepare the contiainer for building react
 RUN npm install --silent
-RUN npm install react-scripts@3.0.1 -g --silent
+RUN npm install react-scripts@5.0.1 -g --silent
 RUN npm run build
 
 ##prepare nginx
